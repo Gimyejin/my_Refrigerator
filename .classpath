@@ -6,11 +6,8 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-HEAD
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaFx"/>
 	<classpathentry kind="lib" path="C:/건회/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/김하용/Desktop/직업훈련/eclipse project/ojdbc6.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/javaFx"/>
-8b93a2288be4a938aff309937b96926de364ae10
 	<classpathentry kind="output" path="bin"/>
 </classpath>

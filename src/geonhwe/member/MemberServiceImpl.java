@@ -44,24 +44,15 @@ public class MemberServiceImpl implements MemberService{
 		// = 하나는 저장, == 앞과 뒤가 같은지 확인하는 용도 / 오른쪽의 값을 좌측에 넣겠다.
 
 		int result = tpj.insert(dto);
-		MemberDTO ggdto = tpj.loginChk(id.getId());
-		
-		if(result == 0) { alertMethod("회원가입 불가능!");
-		alertMethod("이미 가입된 아이디입니다.");
+
+		if(result == 0) { alertMethod ("이미 가입된 아이디입니다.");
+		System.out.println("회원가입 실패!");
 		}else if(result == 1) {
-			System.out.println("회원가입 가능!");
-			if(ggdto.getId().equals(id.getId())) {
-				alertMethod("회원가입이 되었습니다.");
-				Stage stage = (Stage)root.getScene().getWindow();
-				stage.close();
+			alertMethod ("회원가입이 가능한 아이디입니다.");
+			System.out.println("회원가입 완료!");
+			
 				
-				result = 1;
-				
-				MemberController mmc = new MemberController();
-				mmc.setRoot(memberRoot);
-				
-			}
-		}
+			} 
 		
 		System.out.println(dto.getId()); // set = 넣다 get = 꺼내다
 		System.out.println(dto.getName());
