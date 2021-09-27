@@ -15,6 +15,8 @@ import geonhwe.Login.LoginServiceImpl;
 
 import geonhwe.member.MemberService;
 import geonhwe.member.MemberServiceImpl;
+import hayong.FoodListController;
+import hayong.HyMain;
 import javafx.fxml.FXMLLoader;
 
 import javafx.fxml.Initializable;
@@ -32,6 +34,7 @@ public class MainFunction_Controller implements Initializable{
 	MemberService ms;
 	MemoProc mc;
 	TempProc tc;
+	hayong.HyMain hy;
 
 	public void setRoot(Parent root) {
 		this.root = root;
@@ -44,6 +47,7 @@ public class MainFunction_Controller implements Initializable{
 		ms = new MemberServiceImpl();
 		mc = new MemoProc();
 		tc = new TempProc();
+		hy = new HyMain();
 
 	}
 
@@ -130,6 +134,12 @@ public class MainFunction_Controller implements Initializable{
 		sc.setRoot(newRoot);
 		sc.shelfLifeList();
 
+	}
+	public void food() {
+		System.out.println("관리로이동");
+		hy.foodScene();
+
+		
 	}
 
 }

@@ -17,6 +17,10 @@ import main.MainFunction_Controller;
 
 
 public class LoginServiceImpl implements LoginService {
+	public static String staticid; //id전역변수설정
+	public static String getStaticid() {return staticid;}
+	public static void setStaticid(String staticid) {LoginServiceImpl.staticid = staticid;}
+
 	Parent root;
 
 	LoginProc lp;
@@ -52,6 +56,8 @@ public class LoginServiceImpl implements LoginService {
 				System.out.println("로그인 성공");
 				Stage stage = (Stage)root.getScene().getWindow();
 				stage.close();//로그인 성공시 해당 창 닫음
+				//하용 테스트
+				setStaticid(id.getText());
 				
 				result = 1;
 				System.out.println("(연결용)메뉴페이지로 넘어감");
